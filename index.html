@@ -3,8 +3,90 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> 
   </head>
   <body>
+
+   <header>
+     <div class="top"> <h1>< l ></h1></div>
+
+      <!-- Menú por generación-->
+      <select id="select">
+        <option value="0">Seleccionar...</option>        
+        <option value="0" class="city">AQP</option>
+        <option value="2017-2">2017-2</option>
+        <option value="2017-1">2017-1</option>
+        <option value="2016-2">2016-2</option>
+        <option value="0" class="city">CDMX</option>
+        <option value="2017-2">2016-2</option>
+        <option value="2017-1">2017-1</option>
+        <option value="0" class="city">LIM</option>
+        <option value="2017-2">2015-1</option>
+        <option value="2017-1">2015-2</option>
+        <option value="2016-2">2016-1</option>
+        <option class="city" value="0" >SCL</option>
+        <option value="2017-2">2017-2</option>
+        <option value="2017-1">2017-1</option>
+        <option value="2016-2">2016-2</option> 
+      </select>
+      <!--botón-->
+        <button id="btn1">Mostrar</button>
+    </div>
+   </header>
+   <div class="linea"></div>
+        
+
+   <!-- old menú 
+   <div id="caja">
+   <section>
+     <nav id="topbar">
+       <ul id="global" >
+         <li><a id="sedes">SEDES  <span class="fa fa-sort-desc" aria-hidden="true"span></span></a></li>
+         <li><a>ESTUDIANTES  <span class="fa fa-sort-desc" aria-hidden="true"span></span></a></li>
+         </ul>
+     </nav>
+   </section>
+
+   <section>
+    <ul id="sds">
+      
+      <li>SCL<div id="subScl" class="sedesSub">
+        <ul id="subSclList"> 
+          <li>2017-2</li>
+          <li>2017-1></li>
+          <li>2016-2</li>
+          </ul>
+      </div></li>
+      
+      <li>AQP<div id="subAqp" class="sedesSub">
+        <ul id="subAqpList"> 
+          <li>2017-1></li>
+          <li>2016-2</li>
+          </ul>
+        </div></li>
+      
+      <li>LIM<div id="subLim" class="sedesSub">
+        <ul id="subLimList">
+          <li>2017-2</li> 
+          <li>2017-1></li>
+          <li>2016-2</li>
+          </ul></div>
+      </li>
+
+      <li>CDMX<div id="subCdmx" class="sedesSub">
+        <ul id="subCdmxList"> 
+          <li>2017-2></li>
+          <li>2017-1</li>
+          </ul></div></li>
+    </ul>
+    
+   </section>
+    </div> --> 
+
+
+
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
