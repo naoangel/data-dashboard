@@ -5,36 +5,6 @@
 // Puedes hacer uso de la base de datos a través de la variable `data`
 //console.log(data);
 
-// var menu1 = document.getElementsByClassName("menu1");
-
-// for (var i = 0; i < menu1.length; i++)
-// {
-// 	//iterara y en cada indice creara un evento click, que mostrara show
-// 	menu1[i].addEventListener("click",showMenu);
-// }
-
-// //crear evento showMenu para mostrar el subMenu, cambiar el hiden por show.
-// //hiden esta determinado en el html
-// function showMenu()
-// {
-// 	var listMenu = this.getElementsByClassName("itemList")[0];
-
-// 	if (listMenu.classList.contains("hide"))
-// 	{
-// 		//remover clase hide
-// 		listMenu.classList.remove("hide");
-// 		//agregar clase show, que esta en css
-// 		listMenu.classList.add("show");
-
-// 		//console.log(listMenu); //ayuda para verificar
-// 	}
-// 	else
-// 	{
-// 		listMenu.classList.remove("show");
-// 		listMenu.classList.add("hide");
-// 	}
-// }
-
 
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 //              AREQUIPA
@@ -49,119 +19,264 @@
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 //variable contador para total estudiantes
-var contEst = 0;
+var contEstudiantes = 0;
 
-//iterar en cada estudiante de la sede arequipa generacion 2016-2
+//iterar en cada estudiante de sede y generacion seleccionada
 for (var i = 0; i < data.AQP['2016-2'].students.length; i++) 
 {
 	//contar cada estudiante
-	contEst ++;
+	contEstudiantes ++;
 }
 
-console.log("Numero de estudiantes: " + contEst);
+//console.log("Numero de estudiantes: " + contEstudiantes); //verifica por consola
+
+//agregara el resultado en el parrafo del html con el id de "datosA" 
+document.getElementById("datosA").innerHTML = contEstudiantes;
 
 
-//PORCENTAJE DE DESERCION  DE ESTUDIANTES
+//PORCENTAJE DE DESERCION DE ESTUDIANTES
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-//contador para total alumnas
-var cont = 0;
-
-//contador para alumnas que desertaron
-var cont2 = 0;
+//contador para alumnas que se fueron
+var contDesercion = 0;
 
 //variable para sacar promedio
-var porDes = 0;
+var porcentajeDes = 0;
 
 //iterar en cada alumna
 for (var i = 0; i < data.AQP['2016-2'].students.length; i++) 
 {
-	//contar cada alumna
-	cont ++;
-	// console.log(data.SCL['2016-2'].students[i].active);
-	
 	//si active = falso, osea que se fue para la casa :(, contar
 	if(data.AQP['2016-2'].students[i].active === false)
 	{
-		cont2++;
+		contDesercion++;
 	}
 }
 	
-//sacar promedio = desertoras / total de las empezaron
-porDes = (cont2 * 100) /cont;
+//sacar promedio = ((desertoras * 100) / total de las que empezaron)
+porcentajeDes = parseInt((contDesercion * 100)/contEstudiantes); 
 
-console.log("Porcentaje de alumnas que desertaron: " + porDes);
+//parseInt para pasar a entero el numero con decimal. 
+
+//console.log("Porcentaje de alumnas que desertaron: " + porcentajeDes); //para verifica por consola
+
+//agregar el resultado de porcentaje en el parrafo del html donde esta el id "datosB" 
+document.getElementById("datosB").innerHTML = porcentajeDes;
+
+
+
+
+
+//00000000000000000000000000000000000000000000000000000000000000000000
+//00000000000000000000000000000000000000000000000000000000000000000000
+
 
 
 //CANTIDAD DE ESTUDIANTES QUE SUPERA LA META DE PUNTOS EN PROMEDIO DE TODOS LOS SPRINTS.
 //META DE PUNTOS ES 70% DEL TOTAL DE PUNTOS
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-var contPun = 0;
-var contPun2 = 0;
+
+// //variable para sumar total puntos
+// var sumaSprint = 0;
+
+// //variable para calcular promedio
+// var promSprint = 0;
+
+// //variable suma cant ninas
+// var sumNinas = 0;
 
 
+// //iterar en cada alumna
+// for (var i = 0; i < data.AQP['2016-2'].students.length; i++) 
+// {
+// 	//si se encuentra activa, ingresar al sprint para calcular los datos
+// 	if(data.AQP['2016-2'].students[i].active === true)
+// 	{	
+		
+// 		if ((data.AQP['2016-2'].students[i].sprints.tech) + (data.AQP['2016-2'].students[i].sprints.tech) >= 2100)
+// 		{
+// 			//sumar nina
+// 			sumNinas ++;
+// 			//sumar puntos
+// 			sumaSprint++;
+// 		}
+
+// 	}
+// }
+
+// promSprint = 
+
+// console.log(sumNinas);
+// //document.getElementsById("datosC").innerHTML = sumNinas;
+
+
+
+
+// var sumaMetas = (function () 
+// {
+// 	var totalMetas = 0;
+
+// 	for (var i = 0; i < data.AQP['2016-2'].ratings.length; i++) 
+// 	{
+// 		totalMetas += ((ninasActivas * data.AQP['2016-2'].ratings[i].student.cumple) / 100);
+// 	}
+// 	return totalMetas;
+// });
+
+// var metas = sumaMetas () / data.AQP['2016-2'].ratings.length;
+
+// metaEstudiante = parseInt(metas);
+// document.getElementById("datosC").innerHTML = metaEstudiante;
+
+// //calcular el porcentaje de las que llegan a la meta
+// totalPocentaje = parseInt((metas * 100) / ninasActivas);
+
+
+// document.getElementById("datosD").innerHTML = totalPocentaje;
+
+
+
+//CALCULAR EL NET PROMOTER SCORE (NPS)
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+//promotores de laboratoria
+
+// var sumaPromotores = (function () 
+// {
+// 	var totalProm = 0;
+
+// 	for (var i = 0; i < data.AQP['2016-2'].ratings.length; i++) 
+// 	{
+// 		totalProm += data.AQP['2016-2'].ratings[i].nps.promoters;
+// 	}
+
+// 	return totalProm;
+// });
+
+// document.getElementById("promotores").innerHTML = (sumPromoters() / data.AQP['2016-2'].ratings.length) + "% ";
+
+
+
+
+//LA CANTIDAD Y % QUE REPRESENTA EL TOTAL DE ESTUDIANTES QUE SUPERAN
+//LA META TECH EN PROMEDIO Y POR SPRINT 
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+//CANT Y % DEL TOTAL QUE SUPERAN LA META DE PTOS TECNICOS EN PROMEDIO Y POR SPRINT
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+var sumPtoTech = 0;
+var proTech = 0;
+
+//iterar todas las estudiantes
 for (var i = 0; i < data.AQP['2016-2'].students.length; i++) 
 {
-	//contar cada alumna
-	contPun ++;
-	console.log(cont);
-
-	if(data.AQP['2016-2'].students.sprints[tech]; i++ )
+	//verificar si la estudiante esta activa
+	if(data.AQP['2016-2'].students[i].active === true)
 	{
-		contPun2++;
+		//si esta activa ingresar a los puntos tech
+		for( var i = 0; i < data.AQP['2016-2'].students[i].sprints.tech; i++)
+		{
+			if (data.AQP['2016-2'].students[i].sprints.tech >= 1260)
+			{
+				sumPtoTech ++;
+			}
+		}
 	}
 }
 
 
+console.log(sumPtoTech);
 
 
 
 
-//Net Promoter Score (NPS)
-//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-// promedio de los sprints cursados. El NPS se calcula, en base a la encuesta que las 
-//estudiantes responden al respecto de la recomendación que darían de Laboratoria, 
-//bajo la siguiente fórmula:
 
-// [Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
-// [Passive] = [Respuestas 7 u 8] / [Total respuestas] * 100
-// [Detractors] = [Respuestas entre 1 y 6] / [Total respuestas] * 100
-
-// [NPS] = [Promoters] - [Detractors]
+//CANT Y % QUE SUPERAN LA META DE PUNTOS HSE EN PROMEDIO Y SPRINT
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 
 
 
-//LA PUNTUACION % DE L@S PROFES
 
-//variable para sacar promedio
-// var porProf = 0;
-// var sum = 0;
-// var sum2 = 0;
 
- 
-// for (var i = 0; i < data.AQP['2016-2'].ratings.teacher.length; i++) 
-// {
-// 	//contar cada alumna
-// 	//cont ++;
-// 	 console.log(data.SCL['2016-2'].ratings[teacher]);
 
-// }
+
+
+
+
+
+
+//EL % DE ESTUDIANTES SATISFECHAS CON LABORATORIA
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+
+//PUNTUACION PROMEDIO DE L@S PROFES
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+//variable para sumar puntos de l@s profes
+var sumPtosProfes = 0;
+
+//variable para calcular promedio
+var promProfes = 0;
+
+//iterar en cada puntaje de l@s profes
+for (var i = 0; i < data.AQP['2016-2'].ratings[i].teacher.length; i++) 
+{
+	//sumar puntos
+	sumPtosProfes ++;
+}
+
+console.log(sumPtosProfes);
+
+//sacar promedio (puntos / cantidad de sprints)
+promProfes = parseInt( sumPtosProfes / data.AQP['2016-2'].ratings[i].teacher.length );
+
+//document.getElementById("datosP").innerHTML = parseInt( sumPtosProfes / data.AQP['2016-2'].ratings[i].teacher.length );
+
+console.log(promProfes);
+
+//document.getElementById("datosP").innerHTML = promProfes;
+
+
 	
-//sacar promedio = desertoras / total de las empezaron
-//porDes = (cont2 * 100) /cont;
 
-//console.log("Porcentaje de alumnas que desertaron: " + porDes);
+//console.log("Porcentaje de alumnas que desertaron: " + porcentajeDes); //para verifica por consola
 
-
-//La puntuación promedio de l@s jedi masters.
+//agregar el resultado de porcentaje en el parrafo del html donde esta el id "datosB" 
+//document.getElementById("datosB").innerHTML = porcentajeDes;
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//PUNTUACION PROMEDIO DE L@S JEDI MASTER
 
 
 
