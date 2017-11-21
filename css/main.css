@@ -1,3 +1,337 @@
 /*
  * Estilos de tu proyecto
  */
+* {
+	margin:0;
+	padding:0;	
+	font-family:'PT Sans', sans-serif;
+}
+ 
+
+header{
+	background-color: #F7B617;
+    height:150px;
+    width:100%;
+    text-align: center;
+}
+
+
+h1 {
+	color:#FFF;
+	padding-top :20px;
+	font-size: 80px;
+	
+}
+
+#barra{
+	height: 100px;
+	width: 100%;
+	background-color: #F7F7F7;
+}
+#select{
+    width: 20%;
+    margin-left: 50px;
+    border-color: #E1DEDE;
+    border-style: solid;
+    border-radius: 1px;
+}
+
+#btn1{
+    margin-left: 120 px;
+    background-color:  #F7B617;
+    color: #fff;
+    border-style: none;
+    width: 80px;
+    padding-top: 1px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding-bottom: 5px;
+
+}
+
+#btn1:hover, #btn2:hover, #btn3:hover{
+	background-color: #fff;
+	color: #F7B617;
+	border-color: #E1DEDE;
+	border-radius: 3px;
+	border-style: solid;
+	cursor: pointer;
+}
+
+#select, #btn1{
+    display: inline-block;
+	float: left;
+    font-size: 18px; 
+    margin-top: 40px;
+}
+
+
+
+/*menú tec*/
+
+#menuTec, #menuHse {
+	width: 80%;
+	height: 40px;	
+}
+
+#btn2, #btn3{
+	background-color:  #F7B617;
+    color: #fff;
+    border-style: none;
+    width: 80px;
+    padding-top: 1px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding-bottom: 5px;
+	float: left;
+	}
+
+#select2, #select3{
+    width: 20%;
+    margin-left: 5px;
+    border-color: #E1DEDE;
+    border-style: solid;
+    border-radius: 1px;
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------
+    COMIENZO ESTILO DE SECCION DE GRAFICOS
+----------------------------------------------*/
+/*Estilo seccion uno y cuatro  */
+/*-----------------------------*/
+section
+{
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.datos
+{
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff /*fcf9f9*/;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    
+
+      /*border: 1px solid green;*/    /*ayuda visual*/
+}
+
+.titulo
+{
+    margin-bottom: 10px;
+}
+
+.datosDados
+{
+    vertical-align: top;
+    background-color: #f7db88   /*f7f7f7*/;
+    width: 45%;
+    height: 60px;
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+    display: inline-block;
+    /*border: 1px solid orange;*/   /*ayuda visual*/
+}
+
+.npsData{
+	display: inline-block;
+	float:left;
+	margin-left: 20px;
+}
+
+.grafico
+{
+    margin: 20px;
+}
+/*Estilo segunda y tercera seccion*/
+/*--------------------------------*/
+.datos2
+{
+    display: inline-block;
+    background-color: #fff /*fcf9f9*/;
+    width: 80%;
+    height: 500px;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    /*border: 1px solid red;*/      /*ayuda visual*/
+}
+.datosDados2
+{
+    vertical-align: top;
+    background-color: #f7db88  /*f7f7f7*/;
+    width: 200px;
+    height: auto;
+    padding: 5px;
+    margin: 20px;
+    text-align: center;
+    font-size: 15px;
+    display: inline-block;
+    /*border: 1px solid purple;*/     /*ayuda visual*/
+}
+/*
+select
+{
+    margin: 15px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+}
+button
+{
+    border: none;
+    border-radius: 2px;
+}
+*/
+.anexo
+{
+    display: inline-block;
+    border: 1px solid purple;
+    margin: 10px;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+
+
+/* Menú global
+
+#topbar{
+	height: 60px;
+	width: 100%;
+	background-color:#8F8D8D 
+
+}
+
+#global{
+	
+	text-align:center;
+	text-decoration: none;
+	
+	
+}
+
+#global li{
+	height: 60px;
+	width: 150px ;
+	background-color:#8F8D8D;
+	color: #FFF;
+	display: inline-block;
+	float:left;
+	font-weight: bold;
+	margin-top:20px;
+
+}
+
+#global li:hover{
+	background-color:#FFF;
+	color:#F7B617;
+}
+
+ a{
+	margin-top: 25px;
+}
+
+#caja{
+	background-color:#F0EFEF;
+	height: 600px;
+
+}
+ */
+
+
+/*menús desplegables (visibles/invisibles)sedes 
+#sds {
+	text-decoration: none;
+	text-align: center;
+	display: none;
+}
+
+#sds li{
+	height: 60px;
+	width: 150px ;
+	background-color:#8F8D8D;
+	color: #FFF;
+	
+	
+
+}
+
+#sds li:hover{
+	background-color: #FFF;
+	color:#F7B617;
+}
+*/
+
+
+/*primer sub menú de SDS
+
+
+
+.sedesSub{
+
+
+}
+
+
+#subScl {
+	margin-left: 152px;
+	margin-top:  -22px;
+	display: none;
+}
+
+#subSclList {
+	text-decoration: none;
+	
+}
+
+#subAqp {
+	margin-left: 152px;
+	margin-top: -22px;
+	display: none;
+
+}
+
+#subAqpList{
+
+}
+
+#subLim{
+	margin-left: 152px;
+	margin-top: -22px;
+	display: none;
+}
+
+
+#sublimList{
+
+}
+
+#subCdmx{
+	margin-left: 152px;
+	margin-top:-22px;
+	display: none;
+}
+
+#subCdmx{
+
+}
+*/
