@@ -1,234 +1,323 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Data Dashboard</title>
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> 
+    </head>
+    <body>
 
-    <title>Data Dashboard</title>
+     <header>
+       <div class="top"> <h1>< l ></h1></div>
+         </div>
+     </header>
+        <!-- Menú por generación-->
+        <select id="select">
+          <option value="0">Seleccionar...</option>        
+          <option value="0" class="city">CDMX</option>
+          <option value="2017-2">2016-2</option>
+          <option value="2017-1">2017-1</option>
+          <option value="0" class="city">LIM</option>
+          <option value="2017-2">2015-1</option>
+          <option value="2017-1">2015-2</option>
+          <option value="2016-2">2016-1</option>
+          <option class="city" value="0" >SCL</option>
+          <option value="2017-2">2017-2</option>
+          <option value="2017-1">2017-1</option>
+          <option value="2016-2">2016-2</option> 
+          <option value="0" class="city">AQP</option>
+          <option value="2017-2">2017-2</option>
+          <option value="2017-1">2017-1</option>
+          <option value="2016-2">2016-2</option>          
+        </select>
+        <!--botón-->
+      <div id="barra">
+        <button id="btn1">Mostrar</button>
+      </div> 
 
-    <link rel="stylesheet" href="css/main.css">
-    <!-- <link rel="stylesheet" href="css/fontello.css"> --> <!-- icono -->
+      
+      
 
-  </head>
-  <body>
-
-  
-      <!-- Inicio Primera seccion -->
       <section>
-         
-         <span></span>
-        <!-- Primer div con graficos -->
-       
+
         <!-- Primer grafico -->
-        <div class="datos">
-          <h2 class="titulo">Inscritas</h2>
-          <div class="datosDados" >
-            <p id="datosA">00</p>      
-            <h5>Estudiantes inscritas</h5>      
+          <div class="datos">
+            <h2 class="titulo">Inscritas</h2>
+            <div class="datosDados" >
+              <p id="datosA">00</p>      
+              <h5>Estudiantes inscritas</h5>      
+            </div>
+            <div class="datosDados">
+              <p id="datosB">00</p>        
+              <h5>% desercion</h5>
+            </div>
+            <img class="grafico" src="assets/images/bar-graph.png" alt="Gráfico 1">  
+          </div>
+
+          <!-- Segundo grafico -->
+          <div class="datos">
+            <h2 class="titulo">Metas</h2>      
+          <div class="datosDados">
+            <p id="datosC">00</p>
+            <h5>Superaron Meta</h5>     
           </div>
           <div class="datosDados">
-            <p id="datosB">00</p>        
-            <h5>% desercion</h5>
+            <p id="datosD">00</p>  
+            <h5>% del total </h5>
           </div>
-          <img class="grafico" src="assets/images/bar-graph.png" alt="Gráfico 1">  
+          <img src="assets/images/graph.png" alt="Gráfico 2">
         </div>
 
-        <!-- Segundo grafico -->
+        <!-- Tercer grafico -->
         <div class="datos">
-          <h2 class="titulo">Metas</h2>      
-        <div class="datosDados">
-          <p id="datosC">00</p>
-          <h5>Superaron Meta</h5>     
-        </div>
-        <div class="datosDados">
-          <p id="datosD">00</p>  
-          <h5>% del total </h5>
-        </div>
-        <img src="assets/images/graph.png" alt="Gráfico 2">
-      </div>
+          <h2 class="titulo">Net Promoter Score</h2>
+          <div class="datosDados">
+            <p id="datosE">00</p>
+            <h5>% NPS</h5>     
+          </div>
+         
+          <div class="datosDados">
+                <!-- F!!!!!!!! -->
+            
+            <h5 class="npsData"><p id="promotores">00</p>Promotores</h5>
+            <h5 class="npsData"><p id="pasivo">00</p>Pasivos</h5>
+            <h5 class="npsData"><p id="detractores">00</p>Detractores</h5>
 
-      <!-- Tercer grafico -->
-      <div class="datos">
-        <h2 class="titulo">Net Promoter Score</h2>
-        <div class="datosDados">
-          <p id="datosE">00</p>
-          <h5>% NPS</h5>     
-        </div>
-       
-        <div class="datosDados">
-              <!-- F!!!!!!!! -->
-          <h5><p id="promotores">00</p>Promotores</h5>
-          <h5><p id="pasivo">00</p>Pasivos</h5>
-          <h5><p id="detractores">00</p>Detractores</h5>
+          </div>
+         
+            <img src="assets/images/graph.png" alt="Gráfico 3">
+        
+          </div>
+        </section>
+    
+    <!-- Inicio Segunda seccion -->
+      <section>
+        
+
+        <div class="datos2">
+          <div>
+            <h2 class="dat">Notas Técnicas</h2>
+           <div id="menuTec">
+            <!-- Menu desplegable-->
+            <select id="select2">
+              <option value="0">Seleccione Sprint</option>
+              <option class="place" value="0" >Plan común</option>
+              <option value="Sprint 1">Sprint 1</option>
+              <option value="Sprint 2">Sprint 2</option>
+              <option value="Sprint 3">Sprint 3</option>
+              <option value="Sprint 4">Sprint 4</option>
+              <option value="0" class="place">JavaScript</option>
+              <option value="Sprint 5">Sprint 5</option>
+              <option value="Sprint 6">Sprint 6</option>
+              <option value="Sprint 7">Sprint 7</option>
+              <option value="Sprint 8">Sprint 8</option>
+              <option value="0" class="place">UX Design</option>
+              <option value="Sprint 5">Sprint 5</option>
+              <option value="Sprint 6">Sprint 6</option>
+              <option value="Sprint 7">Sprint 7</option>
+              <option value="Sprint 8">Sprint 8</option>
+            </select>   
+
+            <!-- botón Ir -->
+            <button id="btn2">Ir</button>       
+         </div>
+          </div>
+          
+          <div class="">
+            <div class="datosDados2">
+              <p id="datosG">000</p>
+              <h5>Superaron Meta del 70%</h5>
+            </div>
+
+            <div class="datosDados2">
+              <p id="datosH">000</p>
+              <h5>% del total superaron la meta</h5>
+            </div>
+          </div>
+
+            <img class="imagen1" src="assets/images/rectangular-graphic.png" alt="gráfico de barras">
+          
+          <div class="anexo">
+            <div class="width2">
+              <img class="imagen1" src="assets/images/circle-graphic.png" alt="gráfico de circulo">
+              <h5 id="green"><p id="datosI"></p>Estudiantes que superaron la meta</h5>
+              <h5 id="red"><p id="datosj"></p>Estudiantes que no superaron la meta</h5>
+             </div>
+          </div>
 
         </div>
+
+
+      </section>
+
+
+   <!-- Inicio Tercera seccion -->
+      <section>
+        
+        <div class="datos2">
+          <div>
+            <h2 class="dat">Notas HSE</h2>
+           <div id="menuHse">
+            <!-- Menu desplegable-->
+            <select id="select3">
+              <option value="0">Seleccione Sprint</option>
+              <option value="Sprint 1">Sprint 1</option>
+              <option value="Sprint 2">Sprint 2</option>
+              <option value="Sprint 3">Sprint 3</option>
+              <option value="Sprint 4">Sprint 4</option>      
+            </select>  
+
+            <!-- botón Ir -->
+            <button id="btn3">Ir</button>
        
-          <img src="assets/images/graph.png" alt="Gráfico 3">
-      
+            </div>
+          </div>
+          
+          <div class="">
+            <div class="datosDados2">
+              <p id="datosK">000</p>
+              <h5>Superaron Meta del 70%</h5>
+            </div>
+
+            <div class="datosDados2">
+              <p id="datosL">000</p>
+              <h5>% del total superaron la meta</h5>
+            </div>
+          </div>
+
+            <img class="imagen1" src="assets/images/rectangular-graphic.png" alt="gráfico de barras">
+          
+          <div class="anexo">
+            <div class="width2">
+              <img class="imagen1" src="assets/images/circle-graphic.png" alt="gráfico de circulo">
+              <h5 id="green"><p id="datosM"></p>Estudiantes que superan la meta</h5>
+              <h5 id="red"><p id="datosN"></p>Estudiantes que no superan la meta</h5>
+             </div>
+          </div>
+
         </div>
       </section>
-  
-  <!-- Inicio Segunda seccion -->
-    <section>
+
+      <!-- Inicio Cuarta seccion -->
+      <section>
+
+          <!-- Secto grafico -->
+        <div class="datos">
+          <h2 class="titulo">Satisfaccion de las Estudiantes</h2>
+
+          <div class="datosDados" >
+
+            <p id="datosO">000</p>
+            
+            <h5>% Satisfaccion Estudiantes</h5>      
+          </div>
+
+          <img src="assets/images/graph.png" alt="Gráfico 4">  
+
+        </div>
+
+        <!-- Septimo grafico -->
+        <div class="datos">
+          <h2 class="titulo">Evaluacion Profesores</h2>
+
+          <div class="datosDados" >
+
+            <p id="datosP">000</p>
+            
+            <h5>Calificacion Profesor</h5>      
+          </div>
+
+          <img src="assets/images/graph.png" alt="Gráfico 5"> 
+
+        </div>
+
+         <!-- Octavo grafico -->
+        <div class="datos">
+          <h2 class="titulo">Evaluacion Jedi Master</h2>
+
+          <div class="datosDados" >
+
+            <p id="datosQ">000</p>
+            
+            <h5>Calificacion del Jedi Master</h5>      
+          </div>
+
+          <img src="assets/images/graph.png" alt="Gráfico 6">
+
+        </div>
+
+      </section>
+
+      </main>
+      <!-- Fin Main -->
+
+      <!-- Base de datos -->
+      <script src="./js/data.js"></script>
+      <!-- Aquí va tus archivos JS -->
+      <script src="./js/app.js"></script>
+    </body>
+  </html>
+          
+
+
+
+
+
+
+     <!-- old menú 
+     <div id="caja">
+     <section>
+       <nav id="topbar">
+         <ul id="global" >
+           <li><a id="sedes">SEDES  <span class="fa fa-sort-desc" aria-hidden="true"span></span></a></li>
+           <li><a>ESTUDIANTES  <span class="fa fa-sort-desc" aria-hidden="true"span></span></a></li>
+           </ul>
+       </nav>
+     </section>
+
+     <section>
+      <ul id="sds">
+        
+        <li>SCL<div id="subScl" class="sedesSub">
+          <ul id="subSclList"> 
+            <li>2017-2</li>
+            <li>2017-1></li>
+            <li>2016-2</li>
+            </ul>
+        </div></li>
+        
+        <li>AQP<div id="subAqp" class="sedesSub">
+          <ul id="subAqpList"> 
+            <li>2017-1></li>
+            <li>2016-2</li>
+            </ul>
+          </div></li>
+        
+        <li>LIM<div id="subLim" class="sedesSub">
+          <ul id="subLimList">
+            <li>2017-2</li> 
+            <li>2017-1></li>
+            <li>2016-2</li>
+            </ul></div>
+        </li>
+
+        <li>CDMX<div id="subCdmx" class="sedesSub">
+          <ul id="subCdmxList"> 
+            <li>2017-2></li>
+            <li>2017-1</li>
+            </ul></div></li>
+      </ul>
       
-      <div class="datos2">
-        <div>
-          <h3 class="dat">Notas Tecnicas</h3>
-         
-          <!-- Menu desplegable-->
-          <select id="select">
-            <option value="0">Ingrese seleccion Sprint</option>
-            <option class="place" value="0" >Plan comun</option>
-            <option value="Sprint 1">Sprint 1</option>
-            <option value="Sprint 2">Sprint 2</option>
-            <option value="Sprint 3">Sprint 3</option>
-            <option value="Sprint 4">Sprint 4</option>
-            <option value="0" class="place">JavaScript</option>
-            <option value="Sprint 5">Sprint 5</option>
-            <option value="Sprint 6">Sprint 6</option>
-            <option value="Sprint 7">Sprint 7</option>
-            <option value="Sprint 8">Sprint 8</option>
-            <option value="0" class="place">UX Desing</option>
-            <option value="Sprint 5">Sprint 5</option>
-            <option value="Sprint 6">Sprint 6</option>
-            <option value="Sprint 7">Sprint 7</option>
-            <option value="Sprint 8">Sprint 8</option>
-          </select>   
-
-          <!-- botón Ir -->
-          <button id="btn">Ir</button>       
-       
-        </div>
-        
-        <div class="">
-          <div class="datosDados2">
-            <p id="datosG">000</p>
-            <h5>Superaron Meta del 70%</h5>
-          </div>
-
-          <div class="datosDados2">
-            <p id="datosH">000</p>
-            <h5>% del total superaron la meta</h5>
-          </div>
-        </div>
-
-          <img class="imagen1" src="assets/images/rectangular-graphic.png" alt="gráfico de barras">
-        
-        <div class="anexo">
-          <div class="width2">
-            <img class="imagen1" src="assets/images/circle-graphic.png" alt="gráfico de circulo">
-            <h5 id="green"><p id="datosI"></p>Estudiantes que superaron la meta</h5>
-            <h5 id="red"><p id="datosj"></p>Estudiantes que no superaron la meta</h5>
-           </div>
-        </div>
-
-      </div>
+     </section>
+      </div> --> 
 
 
-    </section>
 
 
- <!-- Inicio Tercera seccion -->
-    <section>
-      
-      <div class="datos2">
-        <div>
-          <h3 class="dat">Notas HSE</h3>
-         
-          <!-- Menu desplegable-->
-          <select id="select">
-            <option value="0">Ingrese seleccion Sprint</option>
-            <option value="Sprint 1">Sprint 1</option>
-            <option value="Sprint 2">Sprint 2</option>
-            <option value="Sprint 3">Sprint 3</option>
-            <option value="Sprint 4">Sprint 4</option>      
-          </select>  
-
-          <!-- botón Ir -->
-          <button id="btn">Ir</button>       
-       
-        </div>
-        
-        <div class="">
-          <div class="datosDados2">
-            <p id="datosK">000</p>
-            <h5>Superaron Meta del 70%</h5>
-          </div>
-
-          <div class="datosDados2">
-            <p id="datosL">000</p>
-            <h5>% del total superaron la meta</h5>
-          </div>
-        </div>
-
-          <img class="imagen1" src="assets/images/rectangular-graphic.png" alt="gráfico de barras">
-        
-        <div class="anexo">
-          <div class="width2">
-            <img class="imagen1" src="assets/images/circle-graphic.png" alt="gráfico de circulo">
-            <h5 id="green"><p id="datosM"></p>Estudiantes que superan la meta</h5>
-            <h5 id="red"><p id="datosN"></p>Estudiantes que no superan la meta</h5>
-           </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Inicio Cuarta seccion -->
-    <section>
-
-        <!-- Secto grafico -->
-      <div class="datos">
-        <h2 class="titulo">Satisfaccion de las Estudiantes</h2>
-
-        <div class="datosDados" >
-
-          <p id="datosO">000</p>
-          
-          <h5>% Satisfaccion Estudiantes</h5>      
-        </div>
-
-        <img src="assets/images/graph.png" alt="Gráfico 4">  
-
-      </div>
-
-      <!-- Septimo grafico -->
-      <div class="datos">
-        <h2 class="titulo">Evaluacion Profesores</h2>
-
-        <div class="datosDados" >
-
-          <p id="datosP">000</p>
-          
-          <h5>Calificacion Profesor</h5>      
-        </div>
-
-        <img src="assets/images/graph.png" alt="Gráfico 5"> 
-
-      </div>
-
-       <!-- Octavo grafico -->
-      <div class="datos">
-        <h2 class="titulo">Evaluacion Jedi Master</h2>
-
-        <div class="datosDados" >
-
-          <p id="datosQ">000</p>
-          
-          <h5>Calificacion del Jedi Master</h5>      
-        </div>
-
-        <img src="assets/images/graph.png" alt="Gráfico 6">
-
-      </div>
-
-    </section>
-
-    </main>
-    <!-- Fin Main -->
-
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
-  </body>
-</html>
+  		<!-- Base de datos -->
+  		<script src="./js/data.js"></script>
+  		<!-- Aquí va tus archivos JS -->
+      <script src="./js/app.js"></script>
+    </body>
+  </html>
